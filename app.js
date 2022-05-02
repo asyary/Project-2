@@ -59,6 +59,7 @@ schedule.scheduleJob({rule: "0 3 * * *", tz:"America/Costa_Rica"}, () => {
 })
 
 async function cronReset() {
+  if (!fs.existsSync("./database/")) return
   let readFile = await fs.readdirSync("./database/")
   for (let msgFrom of readFile) {
     fs.unlinkSync("./database/" + msgFrom)
