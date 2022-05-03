@@ -113,25 +113,25 @@ client.on('message', msg => {
     if (!fs.existsSync("./database/." + stripFrom)) {
       if (!msg.from.includes("@g.us")) {
         fs.writeFileSync("./database/." + stripFrom, "")
-        msg.reply(`*¡Hola! Reciba un cordial saludo.* 
+        msg.reply(`*¡Hola! Reciba un cordial saludo.*
 
-Soy su Profesional de salud le atenderá el día de hoy, seleccione alguna de las siguientes opciones 
+Soy su profesional de salud el cual le atenderá el día de hoy. Seleccione alguna de las siguientes opciones:
 
 1. Servicios de salud a nivel domiciliar 
 
 2. Servicios de salud a nivel empresarial 
 
-3. Aplicación de Megadosis de Vitamina 
+3. Aplicación de Megadosis de Vitamina C
 
 4. Servicios de procedimientos de enfermería 
 
-5.Formar parte de nuestro equipo`)
+5.Formar parte de nuestro equipo de trabajo`)
       }
     } else {
       if (/^[1-4]$/g.test(lowerChat)) {
-        msg.reply("En breve se contactará con un asesor/una asesora.")
+        msg.reply("Un profesional de salud se pondrá en contacto con usted en unos minutos.")
       } else if (lowerChat == "5") {
-        msg.reply("Si desea dejar su Currículum por favor enviar al correo reclutamiento@cuidointegral.com y poner el asunto el puesto al que quiere aplicar")
+        msg.reply("Si desea dejar su Currículum por favor enviar un correo a etereorecluta@gmail.com y poner en el asunto el puesto al que desea aplicar.")
       }
     }
   }
