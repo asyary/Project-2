@@ -115,7 +115,8 @@ client.on('message', msg => {
         fs.writeFileSync("./database/." + stripFrom, "")
         msg.reply(`*¡Hola! Reciba un cordial saludo.*
 
-Soy su profesional de salud el cual le atenderá el día de hoy. Seleccione alguna de las siguientes opciones:
+Soy su profesional de salud el cual le atenderá el día de hoy. Seleccione alguna de las siguientes opciones: 
+*Por favor escribir solo el número correspondiente a su solicitud
 
 1. Servicios de salud a nivel domiciliar 
 
